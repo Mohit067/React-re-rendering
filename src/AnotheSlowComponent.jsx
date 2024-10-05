@@ -7,8 +7,7 @@ function waitingForSomething(ms){
     }
 }
 
-export default function SlowComponent({time}, custom){
-    waitingForSomething(time[0]);
-    custom;
-    return "hello";
+export default function AnotherSlowComponent({childern}){
+    waitingForSomething(1000);
+    return <>hello {childern}</>;
 }
